@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", sans-serif;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 12px;
 }
 
@@ -32,17 +32,26 @@ header {
 
 main {
     flex-direction: column;
-    border: 1px solid #C6C6C6;
     .post {
         display: flex;
         flex-direction: column;
+        border: 1px solid #C6C6C6;
+        padding-bottom: 20px;
         .post-header {
             display: flex;
             justify-content: flex-start;
-            margin-top: 15px;
+            align-items: center;
+            margin: 10px;
             gap: 15px;
-            .light-text {
-                display: block;
+            .user-info {
+                display: flex; 
+                flex-direction: column;
+                .user-name {
+                    font-weight: 700;
+                }
+                .post-location {
+                    font-weight: 300;
+                }
             }
         }
         .post-img {
@@ -54,6 +63,7 @@ main {
             justify-content: flex-start;
             margin-top: 15px;
             gap: 15px;
+            margin: 10px 0 0 10px;
             .post-action {
                 height: 22px;
                 width: auto;
@@ -62,10 +72,30 @@ main {
     }
 }
 
-.light-text {
-    font-weight: 400;
+.post-info {
+    margin: 10px 0 0 12px;
+    .user-name, .post-likes {
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    .user-comment {
+        font-weight: 300;
+        margin: 5px;
+    }
 }
 
+.post-action:hover{
+    opacity: 0.6;
+}
+
+.user-name, .post-likes {
+    font-weight: 700;
+}
+
+.user-comment {
+    font-weight: 300;
+    margin: 5px;
+}
 
 .logo {
     width: 125px;
@@ -76,3 +106,4 @@ main {
     height: 40px;
     border-radius: 100%;
 }
+
